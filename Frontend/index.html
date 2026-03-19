@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบจองห้องประชุม</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Meeting Room <span>Booking</span></h1>
+            <p>ตรวจสอบความว่างและจองห้องประชุมได้ทันที</p>
+        </header>
+
+        <div class="main-grid">
+            <section class="card">
+                <h2 class="card-title"><i class="fa-solid fa-calendar-plus"></i> จองห้องประชุม</h2>
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label>เลขห้องประชุม</label>
+                        <input type="text" id="title" required placeholder="เช่น ห้องประชุม A">
+                    </div>
+                    <div style="display: flex; gap: 10px;">
+                        <div class="form-group" style="flex: 1;">
+                            <label>เวลาเริ่ม</label>
+                            <input type="time" id="startTime" required>
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label>เวลาสิ้นสุด</label>
+                            <input type="time" id="endTime" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-submit">ยืนยันการจอง</button>
+                </form>
+                <div id="statusMsg" class="status-msg"></div>
+            </section>
+
+            <section class="card">
+                <h2 class="card-title"><i class="fa-solid fa-list-ul"></i> ตารางวันนี้</h2>
+                <div id="bookingContainer">
+                    </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
